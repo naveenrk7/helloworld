@@ -1,0 +1,12 @@
+name: Send Journal Emails
+
+on:
+  schedule:
+    - cron: "05 0 * * 2"  # Run every Saturday at 8:00 AM (UTC time)
+
+jobs:
+  send_mail:
+    runs-on: ubuntu-latest
+
+      - name: Run Journal Script
+        run: python journal.py
